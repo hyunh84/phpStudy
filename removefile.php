@@ -1,6 +1,6 @@
 <?php
 
-$removefile = 'remove.txt';
+$removefile = './txt/removefile.txt';
 
 
 unlink($removefile);
