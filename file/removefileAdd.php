@@ -1,6 +1,6 @@
 <?php
 
-$file = './txt/removefile.txt';
+$file = '../txt/removefile.txt';
 $txt = 'unlink() 함수 사용해서 파일 삭제하기.';
 
 
