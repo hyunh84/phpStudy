@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scale=no," />
 <meta name="format-detection" content="telephone=no" />
 
-<title>PHP FIlE 제어</title>
+<title>PHP 디렉토리</title>
 
 <style type="text/css">
 
@@ -26,36 +26,17 @@ ul li a:after {dispaly:block; content:""; position:absolute; top:5px; left:0; wi
 
 </head>
 <body>
-<h1>PHP FIlE 제어 예제샘플</h1>
+<h1>PHP 디렉토리 제어 예제샘플</h1>
 
 <ul>
     <li>
-        <a href="file01.php">file01.php</a>
+        <a href="dir01.php">dir01.php</a>
     </li>
     <li>
-        <a href="file02.php">file02.php</a>
+        <a href="dir02.php">dir02.php</a>
     </li>
     <li>
-        <a href="file03.php">file03.php</a>
-    </li>
-    <li>
-        <a href="file04.php">file04.php</a>
-    </li>
-    <li>
-        <a href="file05.php">file05.php</a>
-    </li>
-    <li>
-        <a href="file06.php">file06.php</a>
-    </li>
-    <li>
-        <a href="file07.php">file07.php</a>
-    </li>
-    <li>
-        <a href="removefile.php">removefile.php</a>
-    </li>
-    <li>
-        <strong>removefile전에 파일생성</strong>
-        <a href="removefileAdd.php">removefileAdd.php</a>
+        <a href="dir03.php">dir03.php</a>
     </li>
 </ul>
 
