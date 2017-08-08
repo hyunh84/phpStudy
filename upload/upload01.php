@@ -18,15 +18,20 @@ body,html {margin:0; padding:0;}
 <body>
 <h1>PHP 디렉토리 제어 예제샘플</h1>
 
-<form method="post" enctype="multipart/form-data" action="upload02.php">
-    <br /><br /><br />
-    <input type="hidden" value="3000" name="MAX_FILE_SIZE" />
-    <input type="file" name="userfile" />
+<div style="width:100px; margin:50px auto 0;">
+    <form method="post" enctype="multipart/form-data" action="upload02.php">
 
-    <p style="margin:10px 0 0;"><input type="file" name="userfile02" /></p>
-    <button type="submit">upload</button>
+        <input type="hidden" value="3000000" name="MAX_FILE_SIZE" />
+        <input type="file" name="userfile" />
 
-</form>
+        <p style="margin:10px 0;">
+            <input type="file" name="userfile02" />
+        </p>
+        <button type="submit">upload</button>
+
+    </form>
+</div>
+
 
 
 </body>
