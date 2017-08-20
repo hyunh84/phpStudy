@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scale=no," />
+<title>PUBLISHING</title>
+<script type="text/javascript" src="../resources/js/jquery-1.12.3.min.js"></script>
+<style type="text/css">
+body {padding:0; margin:0; font-size:0.75em; font-family:dotum,"돋움"; color:#333333;}
+#header {overflow:hidden; padding:15px 15px 30px;}
+#header h1 {float:left; padding:0; margin:0; font-size:2.5em; color:#666666; font-family:Arial;}
+#header .logo {float:right; padding:0; margin:0;}
+#depth1 ul {display:inline-block; white-space:nowrap; padding:5px 10px; margin:0; list-style:none; background:#eeeeee;}
+#depth1 ul li {display:inline; padding:0; margin:0 10px;}
+.stepInfo {clear:both; padding:0; margin:5px 0; text-align:right;}
+.stepInfo li {display:inline; margin-right:10px; font-size:0.9em;}
+.stepInfo li span {display:inline-block; width:35px; height:13px; margin-right:3px; vertical-align:top;}
+.listTbl {width:100%; padding:0; margin:0; border:0; border-bottom:1px solid #e7e7e7; border-collapse:collapse;}
+.listTbl thead th {height:26px; font-weight:normal; border:1px solid #666666; white-space:nowrap;}
+.listTbl tbody th {height:24px; padding:0 10px; text-align:left; border:1px solid #e7e7e7; background:#eeeeee;}
+.listTbl tbody td {height:24px; padding:0 10px; line-height:18px; border:1px solid #e7e7e7; border-bottom:0; color:#666666}
+.listTbl th.depth2 {background:#fceff7; border-left:0;}
+.listTbl td.depth2 {white-space:nowrap; text-align:left; background:#fceff7; border-top-color:#e7e7e7;}
+.listTbl th.depth3 {background:#f2fcef;}
+.listTbl td.depth3 {white-space:nowrap; text-align:left; background:#f2fcef; border-top-color:#e7e7e7;}
+.listTbl th.depth4 {background:#efeffc;}
+.listTbl td.depth4 {white-space:nowrap; text-align:left; background:#efeffc; border-top-color:#e7e7e7;}
+.listTbl th.depth5 {background:#fcfcef;}
+.listTbl td.depth5 {white-space:nowrap; text-align:left; background:#fcfcef; border-top-color:#e7e7e7;}
+.listTbl th.popup {background:#effafc;}
+.listTbl td.popup {white-space:nowrap; text-align:left; background:#effafc; border-top-color:#e7e7e7;}
+.listTbl td.link {text-align:left;}
+.listTbl td.link a {white-space:nowrap;}
+.listTbl td.psd,
+.listTbl td.endHtml,
+.listTbl td.check1,
+.listTbl td.check2,
+.listTbl td.end,
+.listTbl td.name {text-align:center; white-space:nowrap;}
+.listTbl th.name,
+.listTbl th.last,
+.listTbl td.name {border-right:0 !important;}
+.listTbl tr:hover td {background:#548bcc !important; color:#ffffff;}
+.step1,
+.listTbl tr td.step1 {background:#999999 !important; color:#ffffff !important;}
+.step2,
+.listTbl tr td.step2 {background:#000000 !important; color:#ffffff !important;}
+.exTxt {font-size:14px; font-weight:bold; color:#003cff !important;}
+
+#footer {position:fixed; left:0; bottom:0; width:100%;}
+#footer .goTop {text-align:right;}
+#footer .goTop a {display:inline-block; padding:1px 3px; text-decoration:none; background:#666666; color:#fff;}
+#footer .footBg {overflow:hidden; padding:10px 0 10px 10px; background:#eeeeee; border-top:1px solid #666666;}
+#footer .progress,
+#footer .nameList {padding:5px 0 0; margin:0; }
+#footer .progress li,
+#footer .nameList li {display:inline; padding:0; margin:0 10px 0 0; color:blue; }
+#footer .nameList {display:block;}
+#footer .tempMenu {float:right; white-space:nowrap; padding:0; margin:0; list-style:none;}
+#footer .tempMenu li {display:inline; padding:0; margin:0 10px;}
+#footer .info {padding:0; margin:0; list-style:none;}
+#container {padding-bottom:150px;}
+
+.ajax,.listTbl tr.ajax td {background:yellow;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var end = $('td.end');
+		var step2 = $('td.step2');
+		$('.total').text(end.length);
+		$('.num').text(step2.length);
+	});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<h1><img src="header_logo.gif" alt="Caffe Bene" /></h1>
+	</div>
+	<!-- //header -->
+
+<!-- container -->
+
+<div id="container">
+
+<div id="depth1">
+	<ul>
+		<li><a href="../html/template.html" target="_blank" style="font-weight:bold; font-size:30px;">template</a></li>
+		<li><a href="../html/tnb.html" target="_blank" style="font-weight:bold; font-size:30px;">tnb</a></li>
+	</ul>
+</div>
+<ul class="stepInfo">
+	<li>
+		<div style="padding:0 0 10px; font-size:20px;  text-align:right;">
+			<strong class="num"></strong> /
+			<span class="total"></span>
+		</div>
+	</li>
+	<li><span class="step1"></span>진행중</li>
+	<li><span class="step2"></span>완료</li>
+</ul>
+<table class="listTbl" summary="코딩 파일 리스트입니다.">
+<caption></caption>
+<colgroup>
+	<col />
+	<col />
+	<col />
+	<col width="40" />
+	<col width="50" />
+</colgroup>
+<thead>
+<tr>
+	<th scope="col" class="depth2">2DEPTH</th>
+	<th scope="col" class="depth3">3DEPTH</th>
+	<th scope="col">비고</th>
+	<th scope="col">화면ID(링크)</th>
+	<th scope="col">완료</th>
+</tr>
+<tbody>
+<tr>
+	<th scope="col" id="" class="last" colspan="12">main</th>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/index.html" target="_blank">index</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Login</th>
+</tr>
+<tr>
+	<td class="depth2">로그인</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/tnb/Login.html" target="_blank">Login</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">비밀번호/아이디 찾기</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/tnb/Find.html" target="_blank">Find</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">아이디 찾기</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/tnb/Find_ID.html" target="_blank">Find_ID</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">비밀번호 찾기</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/tnb/Find_PW.html" target="_blank">Find_PW</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">가입</td>
+	<td class="depth3"></td>
+	<td>본인확인</td>
+	<td class="link"><a href="../html/tnb/Member_01.html" target="_blank">Member_01</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>약관동의</td>
+	<td class="link"><a href="../html/tnb/Member_02.html" target="_blank">Member_02</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>정보입력</td>
+	<td class="link"><a href="../html/tnb/Member_03.html" target="_blank">Member_03</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>가입완료</td>
+	<td class="link"><a href="../html/tnb/Member_04.html" target="_blank">Member_04</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">CS Center</th>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/tnb/Cscenter.html" target="_blank">Cscenter</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Caffebene</th>
+</tr>
+<tr>
+	<td class="depth2">브랜드 스토리</td>
+	<td class="depth3"></td>
+	<td class="exTxt"></td>
+	<td class="link"><a href="../html/gnb/01Caffebene/BrandStory.html" target="_blank">BrandStory</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">커피 스토리</td>
+	<td class="depth3"></td>
+	<td class="exTxt"></td>
+	<td class="link"><a href="../html/gnb/01Caffebene/CoffeeStory.html" target="_blank">CoffeeStory</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">세계속의 카페베네</td>
+	<td class="depth3"></td>
+	<td class="exTxt"></td>
+	<td class="link"><a href="../html/gnb/01Caffebene/WorldStory.html" target="_blank">WorldStory</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">카페베네 랜드마크</td>
+	<td class="depth3"></td>
+	<td class="exTxt"></td>
+	<td class="link"><a href="../html/gnb/01Caffebene/Landmark.html" target="_blank">Landmark</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Menu</th>
+</tr>
+<tr>
+	<td class="depth2">메뉴</td>
+	<td class="depth3"></td>
+	<td>상세보기</td>
+	<td class="link"><a href="../html/gnb/02Menu/Menu_Detail.html" target="_blank">Menu_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">상품</td>
+	<td class="depth3"></td>
+	<td>상세보기</td>
+	<td class="link"><a href="../html/gnb/02Menu/MD_Detail.html" target="_blank">MD_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">금주의 인기메뉴</td>
+	<td class="depth3"></td>
+	<td class="exTxt"></td>
+	<td class="link"><a href="../html/gnb/02Menu/Best.html" target="_blank">Best</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">메뉴</td>
+	<td class="depth3">신메뉴</td>
+	<td>리스트(상단 비주얼 영역 각메뉴 틀림)</td>
+	<td class="link"><a href="../html/gnb/02Menu/Menu_All01.html" target="_blank">Menu_All01</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">메뉴</td>
+	<td class="depth3">음료&amp;차</td>
+	<td>리스트(상단 비주얼 영역 각메뉴 틀림)</td>
+	<td class="link"><a href="../html/gnb/02Menu/Menu_All02.html" target="_blank">Menu_All02</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Community</th>
+</tr>
+<tr>
+	<td class="depth2">이벤트</td>
+	<td class="depth3">이벤트</td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/gnb/03Community/Event_Event.html" target="_blank">Event_Event</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/03Community/Event_Event_Detail.html" target="_blank">Event_Event_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">매장별 이벤트</td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/gnb/03Community/Event_StoreEvent.html" target="_blank">Event_StoreEvent</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/03Community/Event_StoreEvent_Detail.html" target="_blank">Event_StoreEvent_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">당첨자 공지</td>
+	<td>리스트/상세(toggle 리스트)</td>
+	<td class="link"><a href="../html/gnb/03Community/Event_Notice.html" target="_blank">Event_Notice</a></td>
+	<td class="end step2">O</td>
+</tr>
+<!-- <tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/03Community/Event_Notice_detail.html" target="_blank">Event_Notice_detail</a></td>
+	<td class="end step0"></td>
+</tr> -->
+<tr>
+	<td class="depth2">공지사항</td>
+	<td class="depth3"></td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/gnb/03Community/Notice.html" target="_blank">Notice</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/03Community/Notice_Detail.html" target="_blank">Notice_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">뮤직큐레이션</td>
+	<td class="depth3">뮤직큐레이션 소식</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/03Community/Music_info.html" target="_blank">Music_info</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">사연과 신청곡</td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/gnb/03Community/Music_Notice.html" target="_blank">Music_Notice</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/03Community/Music_Notice_Detail.html" target="_blank">Music_Notice_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>신청</td>
+	<td class="link"><a href="../html/gnb/03Community/Music_Notice_Save.html" target="_blank">Music_Notice_Save</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>수정</td>
+	<td class="link"><a href="../html/gnb/03Community/Music_Notice_Edit.html" target="_blank">Music_Notice_Edit</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>비밀번호</td>
+	<td class="link"><a href="../html/gnb/03Community/Music_Notice_Pass.html" target="_blank">Music_Notice_Pass</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">선곡표</td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/gnb/03Community/Music_List.html" target="_blank">Music_List</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">소셜 카페베네</td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/03Community/Social.html" target="_blank">Social</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Membership</th>
+</tr>
+<tr>
+	<td class="depth2">나의 멤버쉽</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/04Membership/My.html" target="_blank">My</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">멤버쉽소개</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/04Membership/M_Intro.html" target="_blank">M_Intro</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">등급및혜택</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/04Membership/Grade.html" target="_blank">Grade</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">기프트 & 할인카드</td>
+	<td class="depth3">제휴 할인카드</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/04Membership/Salecard.html" target="_blank">Salecard</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">기프트 카드</td>
+	<td class="exTxt"></td>
+	<td class="link"><a href="../html/gnb/04Membership/Giftcard.html" target="_blank">Giftcard</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">자주하는 질문</td>
+	<td class="depth3"></td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/gnb/04Membership/M_FAQ.html" target="_blank">M_FAQ</a></td>
+	<td class="end step2">O</td>
+</tr>
+<!-- <tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/04Membership/M_FAQ_Detail.html" target="_blank">M_FAQ_Detail</a></td>
+	<td class="end step0"></td>
+</tr> -->
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Store</th>
+</tr>
+<tr>
+	<td class="depth2">매장소개</td>
+	<td class="depth3">신규SI 매장</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/05Store/Renewal.html" target="_blank">Renewal</a></td>
+	<td class="end step2">O</td>
+</tr>
+<!-- <tr>
+	<td class="depth2"></td>
+	<td class="depth3">클래식 매장</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/05Store/Classic.html" target="_blank">Classic</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">베이글 매장</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/05Store/Bagle.html" target="_blank">Bagle</a></td>
+	<td class="end step2">O</td>
+</tr> -->
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">특수 매장</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/05Store/Special.html" target="_blank">Special</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">매장찾기</td>
+	<td class="depth3">위치정보로 검색</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/05Store/Location.html" target="_blank">Location</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">매장 및 지도로 검색</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/05Store/Map.html" target="_blank">Map</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/05Store/Seach_Detail.html" target="_blank">Seach_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Franchise</th>
+</tr>
+<tr>
+	<td class="depth2">가맹점 개설 안내</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/06Franchise/F_Intro.html" target="_blank">F_Intro</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">가맹점 FAQ</td>
+	<td class="depth3"></td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/gnb/06Franchise/F_FAQ.html" target="_blank">F_FAQ</a></td>
+	<td class="end step2">O</td>
+</tr>
+<!-- <tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/gnb/06Franchise/F_FAQ_Detail.html" target="_blank">F_FAQ_Detail</a></td>
+	<td class="end step0"></td>
+</tr> -->
+<tr>
+	<td class="depth2">가맹점 상담신청</td>
+	<td class="depth3">가맹점 상담신청</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/06Franchise/F_CS.html" target="_blank">F_CS</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">창업설명회 참여신청</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/06Franchise/F_CS02.html" target="_blank">F_CS02</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">해외 가맹점 안내</td>
+	<td class="depth3">해외 프랜차이즈</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/06Franchise/F_G_Franchise.html" target="_blank">F_G_Franchise</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3">해외 프랜차이즈</td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/06Franchise/F_M_Franchise.html" target="_blank">F_M_Franchise</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">AHA</th>
+</tr>
+<tr>
+	<td class="depth2">AHA</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/gnb/07AHA/AHA.html" target="_blank">AHA</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Company</th>
+</tr>
+<tr>
+	<td class="depth2">카페베네 소개</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/01Company/C_Intro.html" target="_blank">C_Intro</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">CEO 인사말</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/01Company/CEO.html" target="_blank">CEO</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">카페베네 B.I</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/01Company/BI.html" target="_blank">BI</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">홍보영상</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/01Company/Video.html" target="_blank">Video</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">연혁</td>
+	<td class="depth3"></td>
+	<td>리스틍 상세 통합</td>
+	<td class="link"><a href="../html/snb/01Company/History.html" target="_blank">History</a></td>
+	<td class="end step2">O</td>
+</tr>
+<!-- <tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/snb/01Company/History_Detail.html" target="_blank">History_Detail</a></td>
+	<td class="end step0"></td>
+</tr> -->
+<tr>
+	<td class="depth2">찾아오시는길</td>
+	<td class="depth3"></td>
+	<td>본사</td>
+	<td class="link"><a href="../html/snb/01Company/Visit_Headoffice.html" target="_blank">Visit_Headoffice</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>교육센터</td>
+	<td class="link"><a href="../html/snb/01Company/Visit_Edu.html" target="_blank">Visit_Edu</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>로스팅플랜트</td>
+	<td class="link"><a href="../html/snb/01Company/Visit_Roasting.html" target="_blank">Visit_Roasting</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>물류센터</td>
+	<td class="link"><a href="../html/snb/01Company/Visit_Distribution.html" target="_blank">Visit_Distribution</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>지방영업소</td>
+	<td class="link"><a href="../html/snb/01Company/Visit_District.html" target="_blank">Visit_District</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Globalization</th>
+</tr>
+<tr>
+	<td class="depth2">글로벌 카페베네</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/02Globalization/GlobalCB.html" target="_blank">GlobalCB</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">해외 프랜차이즈</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/02Globalization/G_G_Franchise.html" target="_blank">G_G_Franchise</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">해외 마스터 프랜차이즈</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/02Globalization/G_M_Franchise.html" target="_blank">G_M_Franchise</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">Contribution</th>
+</tr>
+<tr>
+	<td class="depth2">활동소개</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/snb/03Contribution/C_Intro.html" target="_blank">C_Intro</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">언론보도</td>
+	<td class="depth3"></td>
+	<td>리스트</td>
+	<td class="link"><a href="../html/snb/03Contribution/C_News.html" target="_blank">C_News</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2"></td>
+	<td class="depth3"></td>
+	<td>상세</td>
+	<td class="link"><a href="../html/snb/03Contribution/C_News_Detail.html" target="_blank">C_News_Detail</a></td>
+	<td class="end step2">O</td>
+</tr>
+
+<tr>
+	<th scope="col" id="" class="last" colspan="12">ETC</th>
+</tr>
+<tr>
+	<td class="depth2">웹사이트 이용약관</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/etc/terms.html" target="_blank">terms</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">개이정보 취급방침</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/etc/privacy.html" target="_blank">privacy</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">멤버십 이용약관</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/etc/mem_terms.html" target="_blank">mem_terms</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">기프트카드 이용약관</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/etc/gift_terms.html" target="_blank">gift_terms</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">휴면계정알림</td>
+	<td class="depth3"></td>
+	<td>인증</td>
+	<td class="link"><a href="../html/etc/SleepID01.html" target="_blank">SleepID01</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">휴면계정알림</td>
+	<td class="depth3"></td>
+	<td>인증완료(화면 내용확인필요)</td>
+	<td class="link"><a href="../html/etc/SleepID02.html" target="_blank">SleepID02</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">Page Not Found</td>
+	<td class="depth3"></td>
+	<td></td>
+	<td class="link"><a href="../html/etc/PNF.html" target="_blank">PNF</a></td>
+	<td class="end step2">O</td>
+</tr>
+<tr>
+	<td class="depth2">팝업</td>
+	<td class="depth3"></td>
+	<td>상단 이미지 슬라이드 클릭하시면 팝업이 뜹니다.!!</td>
+	<td class="link"><a href="../html/etc/popup.html" target="_blank">popup</a></td>
+	<td class="end step2">O</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

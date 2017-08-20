@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scale=no," />
+<meta name="format-detection" content="telephone=no" />
+
+<title>Caffe bene</title>
+<link rel="stylesheet" type="text/css" href="../../resources/css/main.css" />
+<script type="text/javascript" src="../../resources/js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="../../resources/js/html5.js"></script>
+<script type="text/javascript" src="../../resources/js/swiper.jquery.js"></script>
+<script type="text/javascript" src="../../resources/js/swipe.js"></script>
+<script type="text/javascript" src="../../resources/js/style_ui.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var sect01 = new Swipe($('.sect01')[0], {
+		speed: 400,
+		auto: 7000,
+		continuous: true,
+		disableScroll: false,
+		stopPropagation: true,
+		callback: function(index, elem) {
+			$('.sect01 .indicateWrap button').removeClass('on').eq(index).addClass('on');
+		}
+	});
+
+	$('.sect01 .indicateWrap button').click(function() {
+		var _this = $(this);
+		var _index = _this.index();
+		sect01.slide(_index);
+	});
+
+});
+</script>
+
+</head>
+<body>
+<nav class="skip">
+	<ul>
+		<li><a href="#jumpConts">본문바로가기</a></li>
+	</ul>
+</nav>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="header">
+		<div class="headerIn">
+			<h1 class="logo"><a href="#"><img src="../../resources/image/common/logo.jpg" alt="Caffe Bene" /></a></h1>
+
+			<div class="tnbWrap">
+				<a href="#" class="linkEng">ENGLISH</a>
+				<a href="tnb/Login.html" class="linkLog">LOGIN</a>
+				<a href="#" class="linkMem">MY MEMBERSHIP</a>
+				<a href="tnb/Cscenter.html" class="linkCs">C/S CENTER</a>
+				<a href="#" class="linkFas">FIND A STORE</a>
+				<button type="button" class="btnOpenGnb"><span class="blind">메뉴</span></button>
+			</div>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- gnb -->
+	<nav id="gnb">
+		<div class="gnbScroll">
+			<ul class="depth01 swiper-wrapper">
+				<li class="swiper-slide m01"><a href="#"><span>Caffebene</span></a>
+					<div class="depth02">
+						<ul>
+							<li><a href="#">브랜드 스토리</a>
+								<ul class="depth03">
+									<li><a href="gnb/01Caffebene/BrandStory.html">브랜드 스토리</a></li>
+								</ul>
+							</li>
+							<li><a href="#">커피 스토리</a>
+								<ul class="depth03">
+									<li><a href="gnb/01Caffebene/CoffeeStory.html">커피 스토리</a></li>
+								</ul>
+							</li>
+							<li><a href="#">세계속의 카페베네</a>
+								<ul class="depth03">
+									<li><a href="gnb/01Caffebene/WorldStory.html">세계속의 카페베네</a></li>
+								</ul>
+							</li>
+							<li><a href="#">카페베네 랜드마크</a>
+								<ul class="depth03">
+									<li><a href="gnb/01Caffebene/Landmark.html">카페베네 랜드마크</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="swiper-slide m02"><a href="#"><span>Menu</span></a>
+					<div class="depth02">
+						<ul class="noDepth">
+							<li><a href="gnb/02Menu/Menu_Detail.html">신메뉴</a></li>
+							<li><a href="gnb/02Menu/Best.html">금주의 인기메뉴</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">커피</a>
+								<ul class="depth03">
+									<li><a href="gnb/02Menu/Menu_All.html">에스프레소</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">커피블랜디드</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">카페베네 원두</a></li>
+								</ul>
+							</li>
+							<li><a href="#">음료&amp;차</a>
+								<ul class="depth03">
+									<li><a href="gnb/02Menu/Menu_All.html">라떼</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">프라페노&amp;스무디</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">과일주스</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">차</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">에이드</a></li>
+								</ul>
+							</li>
+							<li><a href="#">디저트</a>
+								<ul class="depth03">
+									<li><a href="gnb/02Menu/Menu_All.html">빙수</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">눈꽃빙수</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">젤라또</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">와플</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">브레드&amp;페스츄리</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">케이크</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">핫브레드</a></li>
+								</ul>
+							</li>
+							<li><a href="#">베이글</a>
+								<ul class="depth03">
+									<li><a href="gnb/02Menu/Menu_All.html">베이글</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">크림치즈더블휩</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">베이글 샌드위치&amp;버거</a></li>
+								</ul>
+							</li>
+							<li><a href="#">상품</a>
+								<ul class="depth03">
+									<li><a href="gnb/02Menu/Menu_All.html">카페베네 식품</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">카페베네 상품</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">RTD 음료</a></li>
+									<li><a href="gnb/02Menu/Menu_All.html">카페베네 리테일</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="swiper-slide m03"><a href="#"><span>Community</span></a>
+					<div class="depth02">
+						<ul>
+							<li><a href="#">이벤트</a>
+								<ul class="depth03">
+									<li><a href="gnb/03Community/Event_Event.html">이벤트</a></li>
+									<li><a href="gnb/03Community/Event_StoreEvent.html">매장별 이벤트</a></li>
+									<li><a href="gnb/03Community/Event_Notice.html">당첨자 공지</a></li>
+								</ul>
+							</li>
+							<li><a href="#">공지사항</a>
+								<ul class="depth03">
+									<li><a href="gnb/03Community/Notice.html">공지사항</a></li>
+								</ul>
+							</li>
+							<li><a href="#">뮤직큐레이션</a>
+								<ul class="depth03">
+									<li><a href="gnb/03Community/Music_info.html">뮤직큐레이션 소식</a></li>
+									<li><a href="gnb/03Community/Music_Notice.html">사연과 신청곡</a></li>
+									<li><a href="gnb/03Community/Music_List.html">선곡표</a></li>
+								</ul>
+							</li>
+							<li><a href="#">소셜카페베네</a>
+								<ul class="depth03">
+									<li><a href="gnb/03Community/Social.html">소셜카페베네</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="swiper-slide m04"><a href="#"><span>Membership</span></a>
+					<div class="depth02">
+						<ul>
+							<li><a href="#">나의멤버쉽</a>
+								<ul class="depth03">
+									<li><a href="gnb/04Membership/My.html">나의멤버쉽</a></li>
+								</ul>
+							</li>
+							<li><a href="#">멤버쉽소개</a>
+								<ul class="depth03">
+									<li><a href="gnb/04Membership/M_Intro.html">멤버쉽소개</a></li>
+								</ul>
+							</li>
+							<li><a href="#">등급및혜택</a>
+								<ul class="depth03">
+									<li><a href="gnb/04Membership/Grade.html">등급및혜택</a></li>
+								</ul>
+							</li>
+							<li><a href="#">기프트 &amp; 할인카드</a>
+								<ul class="depth03">
+									<li><a href="gnb/04Membership/Salecard.html">제휴할인 카드</a></li>
+									<li><a href="gnb/04Membership/Giftcard.html">기프트 카드</a></li>
+								</ul>
+							</li>
+							<li><a href="#">자주하는 질문</a>
+								<ul class="depth03">
+									<li><a href="gnb/04Membership/M_FAQ.html">자주하는 질문</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="swiper-slide m05"><a href="#"><span>Store</span></a>
+					<div class="depth02">
+						<ul>
+							<li><a href="#">매장소개</a>
+								<ul class="depth03">
+									<li><a href="gnb/05Store/Renewal.html">매장소개</a></li>
+									<li><a href="gnb/05Store/Special.html">특수 매장</a></li>
+								</ul>
+							</li>
+							<li><a href="#">매장찾기</a>
+								<ul class="depth03">
+									<li><a href="gnb/05Store/Location.html">위치정보로 검색</a></li>
+									<li><a href="gnb/05Store/Map.html">매장명으로 검색</a></li>
+									<li><a href="gnb/05Store/Map.htm">지도로 검색</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="swiper-slide m06"><a href="#"><span>Franchise</span></a>
+					<div class="depth02">
+						<ul>
+							<li><a href="#">가맹점 개설 안내</a>
+								<ul class="depth03">
+									<li><a href="gnb/06Franchise/F_Intro.html">가맹점 개설 안내</a></li>
+								</ul>
+							</li>
+							<li><a href="#">가맹점 FAQ</a>
+								<ul class="depth03">
+									<li><a href="gnb/06Franchise/F_FAQ.html">가맹점 FAQ</a></li>
+								</ul>
+							</li>
+							<li><a href="#">가맹점 상담신청</a>
+								<ul class="depth03">
+									<li><a href="gnb/06Franchise/F_CS.html">가맹점 상담신청</a></li>
+								</ul>
+							</li>
+							<li><a href="#">해외 가맹점 안내</a>
+								<ul class="depth03">
+									<li><a href="gnb/06Franchise/F_G_Franchise.html">해외 프랜차이즈</a></li>
+									<li><a href="gnb/06Franchise/F_M_Franchise.html">해외 마스터 프랜차이즈</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="swiper-slide m07"><a href="gnb/07AHA/AHA.html"><span>A-HA</span></a></li>
+			</ul>
+			<!-- <div class="gnbImgBox"><img src="../../../resources/image/common/gnb_image.png" alt="" /></div> -->
+			<div class="gnb-scrollbar"></div>
+		</div>
+		<button type="button" class="btnCloseGnb"></button>
+	</nav>
+	<!-- //gnb -->
+
+	<!-- container -->
+	<section id="container" class="mainConts">
+		<span id="jumpConts" class="blind" tabindex="0">본문영역</span>
+		<!-- sect01 -->
+		<div class="sect01">
+			<ul class="swipe-wrap">
+				<li>
+					<a href="#" onclick="layerPopFn.open('example'); return false;">
+						<span class="imgBox"><img src="../../resources/image/temp/main_temp01.jpg" alt=" Love You Berry Much ! Strawberry for Darling 상큼하고 달콤한 생딸기와 사랑에 빠지는 순간을 느껴보세요" /></span>
+						<span class="btnMore"><img src="../../resources/image/main/btn_more.png" alt="더보기" /></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="layerPopFn.open('example'); return false;">
+						<span class="imgBox"><img src="../../resources/image/temp/main_temp02.jpg" alt=" Love You Berry Much ! Strawberry for Darling 상큼하고 달콤한 생딸기와 사랑에 빠지는 순간을 느껴보세요" /></span>
+						<span class="btnMore"><img src="../../resources/image/main/btn_more.png" alt="더보기" /></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="layerPopFn.open('example'); return false;">
+						<span class="imgBox"><img src="../../resources/image/temp/main_temp03.jpg" alt=" Love You Berry Much ! Strawberry for Darling 상큼하고 달콤한 생딸기와 사랑에 빠지는 순간을 느껴보세요" /></span>
+						<span class="btnMore"><img src="../../resources/image/main/btn_more.png" alt="더보기" /></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="layerPopFn.open('example'); return false;">
+						<span class="imgBox"><img src="../../resources/image/temp/main_temp04.jpg" alt=" Love You Berry Much ! Strawberry for Darling 상큼하고 달콤한 생딸기와 사랑에 빠지는 순간을 느껴보세요" /></span>
+						<span class="btnMore"><img src="../../resources/image/main/btn_more.png" alt="더보기" /></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="layerPopFn.open('example'); return false;">
+						<span class="imgBox"><img src="../../resources/image/temp/main_temp05.jpg" alt=" Love You Berry Much ! Strawberry for Darling 상큼하고 달콤한 생딸기와 사랑에 빠지는 순간을 느껴보세요" /></span>
+						<span class="btnMore"><img src="../../resources/image/main/btn_more.png" alt="더보기" /></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="layerPopFn.open('example'); return false;">
+						<span class="imgBox"><img src="../../resources/image/temp/main_temp06.jpg" alt=" Love You Berry Much ! Strawberry for Darling 상큼하고 달콤한 생딸기와 사랑에 빠지는 순간을 느껴보세요" /></span>
+						<span class="btnMore"><img src="../../resources/image/main/btn_more.png" alt="더보기" /></span>
+					</a>
+				</li>
+			</ul>
+			<div class="indicateWrap">
+				<button type="button" class="on"><span class="blind">1번째</span></button>
+				<button type="button"><span class="blind">2번째</span></button>
+				<button type="button"><span class="blind">3번째</span></button>
+				<button type="button"><span class="blind">4번째</span></button>
+				<button type="button"><span class="blind">5번째</span></button>
+				<button type="button"><span class="blind">6번째</span></button>
+			</div>
+		</div>
+		<!-- //sect01 -->
+
+		<!-- sect02 : Enjoy the Caffe Bene -->
+		<div class="sect02">
+			<div class="sectInner">
+				<div class="discript">
+					<div class="titWrap">
+						<h2 class="tit"><span>Enjoy the</span> Caffe Bene</h2>
+						<p class="titCopy">카페베네와 함께하는 또 다른 재미로 당신을 초대합니다.</p>
+					</div>
+					<p class="conTxt">카페베네와 함께하는 즐거운 이벤트에 당신을 초대합니다. <br />카페베네를 경험하고, 카페베네와 함께 즐기고, <br />카페베네에서 공감할수 있는 풍성한 이벤트가 <br />당신을 기다리고 있습니다. </p>
+				</div>
+				<a href="#" class="btnMore"><img src="../../resources/image/main/btn_more02.png" alt="더보기" /></a>
+			</div>
+		</div>
+		<!-- //sect02 : Enjoy the Caffe Bene -->
+
+		<!-- sect03 : Farm To Table -->
+		<div class="sect03">
+			<div class="sectInner">
+				<div class="discript">
+					<h2 class="tit">Farm To Table</h2>
+					<p class="titCopy">커피 원두 한 알의 신선함이 테이블에 도착하기까지 <br />특별한 커피의 이야기가 시작됩니다.</p>
+					<p class="conTxt">카페베네에서는 산지별 특징을 최대한 살리고 <br />커피 원두 본연의 맛을 최적화 하는 미디엄 로스팅 기법으로 <br />언제 어디서나, 어느 온도에서나 맛있는 커피를 제공합니다</p>
+				</div>
+				<a href="#" class="btnMore"><img src="../../resources/image/main/btn_more.png" alt="더보기" /></a>
+			</div>
+		</div>
+		<!-- //sect03 : Farm To Table -->
+
+		<!-- sect04 : Delicious Journey with Caffe Bene -->
+		<div class="sect04">
+			<div class="sectInner">
+				<div class="discript">
+					<h2 class="tit"><span>Delicious Journey</span> with Caffe Bene</h2>
+					<p class="titCopy">커피와 함께하는 맛의 여행으로 초대합니다</p>
+				</div>
+				<ul class="menuList">
+					<li class="m01">
+						<a href="#">
+							<strong>Coffee</strong>
+							<p>커피와 함께하는 특별한 시간</p>
+						</a>
+					</li>
+					<li class="m02">
+						<a href="#">
+							<strong>Beverage &amp; Tea</strong>
+							<p>차와 음료로 함께하는 한 잔의 여유</p>
+						</a>
+					</li>
+					<li class="m03">
+						<a href="#">
+							<strong>Dessert</strong>
+							<p>디저트와 함께하는 달콤한 즐거움</p>
+						</a>
+					</li>
+					<li class="m04">
+						<a href="#">
+							<strong>Bagle</strong>
+							<p>내 입맛대로 즐기는 126가지 행복</p>
+						</a>
+					</li>
+					<li class="m05">
+						<a href="#">
+							<strong>MD Product</strong>
+							<p>언제어디서나 즐기는 카페베네</p>
+						</a>
+							
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //sect04 : Delicious Journey with Caffe Bene -->
+
+		<!-- sect05 : Experience the Caffe Bene -->
+		<div class="sect05">
+			<div class="sectInner">
+				<div class="discript">
+					<h2 class="tit">Experience the Caffe Bene</h2>
+					<p class="titCopy">가장 가까운 곳에서 카페베네를 경험하세요</p>
+					<p class="conTxt">나만의 라이프스타일을 자유롭게 느낄 수 있는 카페베네 <br />지금 당신 옆에 있는 카페베네에서 경험해보세요</p>
+				</div>
+				<a href="#" class="btnFindStore"><img src="../../resources/image/main/btn_find_store.png" alt="FIND A STORE" /></a>
+			</div>
+		</div>
+		<!-- //sect05 : Experience the Caffe Bene -->
+
+		<!-- sect06 : Find a Partnership -->
+		<div class="sect06">
+			<div class="sectInner">
+				<div class="discript">
+					<h2 class="tit">Find a Partnership</h2>
+					<p class="conTxt">카페베네와 함께하는 또 다른 재미로 당신을 초대합니다.</p>
+				</div>
+				<div class="partnerHistory">
+					<ul>
+						<li>
+							<ul>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_jpn.png" alt="JAPAN" /></em>
+										<strong>Caffe Bene in JAPAN</strong>
+									</p>
+									<span>4F, MMC Second Bldg, 6-10, Kinko-cho,Kanagawaku, Yokohama, JAPAN</span>
+								</li>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_tai.png" alt="Taiwan" /></em>
+										<strong>Caffe Bene in Taiwan</strong>
+									</p>
+									<span>Rm. A1, 7F., No.230, Sec. 4, Zhongxiao E. Rd., Da’an Dist., Taipei City 106, Taiwan (R.O.C.)</span>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_vtn.png" alt="Vietnam" /></em>
+										<strong>Caffe Bene in Vietnam</strong>
+									</p>
+									<span>67 Nguyen Thi Minh Khai St., Ben Thanh Ward, District 1, Ho Hci Minh City, Vietnam</span>
+								</li>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_usa.png" alt="USA" /></em>
+										<strong>Caffe Bene in USA(East)</strong>
+									</p>
+									<span>1430Broadway Suite 1401,New York, NY 10018</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_usa.png" alt="USA" /></em>
+										<strong>Caffe Bene in USA(West)</strong>
+									</p>
+									<span>5670, Wilshire blvd #760,Los angeles, CA90036</span>
+								</li>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_phil.png" alt="Philippines" /></em>
+										<strong>Caffe Bene in Philippines</strong>
+									</p>
+									<span>Unit I, MOCA Commercial Square Roxas Blvd Cor Cortabitarte st., Malate, Manila 1004, Philippines</span>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_ara.png" alt="Saudi Arabia" /></em>
+										<strong>Caffe Bene in Saudi Arabia</strong>
+									</p>
+									<span>OFFICE 13, F4, A2 BUILDING, RIYADH GALLERY MALL, P.O.BOX 230850 RIYADH 11321, KINGDOM OF SAUDI ARABIA.</span>
+								</li>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_idn.png" alt="Saudi Indonesia" /></em>
+										<strong>Caffe Bene in Indonesia</strong>
+									</p>
+									<span>Jl. Pasirkaliki no. 155 Bandung - 40172, Indonesia</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_mal.png" alt="Malaysia" /></em>
+										<strong>Caffe Bene in Malaysia</strong>
+									</p>
+									<span>No 7, Lorong Teknologi 3/4a, Nouvelle Industrial Park 2, Taman Sains Selangor 1, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia.</span>
+								</li>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_mog.png" alt="Mongolia" /></em>
+										<strong>Caffe Bene in Mongolia</strong>
+									</p>
+									<span>Bayangol district, 15th Khoroo, Ulaanbaatar, Mongolia</span>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_cam.png" alt="Cambodia" /></em>
+										<strong>Caffe Bene in Cambodia</strong>
+									</p>
+									<span>No.52d, Street 57 Corner St 334 Phnom Penh</span>
+								</li>
+								<li>
+									<p class="national">
+										<em><img src="../../resources/image/main/ico_kor.png" alt="Korea" /></em>
+										<strong>etc</strong>
+									</p>
+									<span>Contact person.Mr. Dominic Lee Phone. 82-2-3438-1499 (Korea)</span> 
+								</li>
+							</ul>
+						</li>	
+					</ul>
+				</div>
+				<a href="#" class="btnMore"><img src="../../resources/image/main/btn_more02.png" alt="더보기" /></a>
+			</div>
+		</div>
+		<!-- //sect06 : Find a Partnership -->
+
+
+	</section>
+	<!-- //container -->
+
+	<div class="btnGoTop">
+		<a href="#">TOP</a>
+	</div>
+
+	<!-- snb -->
+	<section id="snb">
+		<ul class="snbIn">
+			<li><span>Company</span>
+				<ul>
+					<li><a href="#">카페베네 소개</a></li>
+					<li><a href="#">CEO 인사말</a></li>
+					<li><a href="#">카페베네 B.I</a></li>
+					<li><a href="#">홍보영상</a></li>
+					<li><a href="#">연혁</a></li>
+					<li><a href="#">찾아오는 길</a></li>
+				</ul>
+			</li>
+			<li><span>Globalization</span>
+				<ul>
+					<li><a href="#">글로벌 카페베네</a></li>
+					<li><a href="#">해외 프랜차이즈</a></li>
+					<li><a href="#">해외 마스터 프랜차이즈</a></li>
+				</ul>
+			</li>
+			<li><span>Contribution</span>
+				<ul>
+					<li><a href="#">활동소개</a></li>
+					<li><a href="#">언론보도</a></li>
+				</ul>
+			</li>
+			<li><span>SNS</span>
+				<ul>
+					<li><a href="#">카페베네 블로그</a></li>
+					<li><a href="#">페이스북</a></li>
+					<li><a href="#">인스타그램</a></li>
+					<li><a href="#">트위터</a></li>
+					<li><a href="#">유투브</a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- /snb -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="footIn">
+			<p class="fLogo"><img src="../../resources/image/common/logo_foot.gif" alt=""/></p>
+			<div class="fUtil">
+				<a href="#">개인정보 취급방침</a>
+				<a href="#">이용약관</a>
+				<a href="#">고객센터 1688-4666</a>
+			</div>
+			<div class="fUtil02">
+				<span class="snsWrap">
+					<a href="#"><img src="../../resources/image/common/foot_sns_face.gif" alt="Facebook"/></a>
+					<a href="#"><img src="../../resources/image/common/foot_sns_twit.gif" alt="Twiter"/></a>
+					<a href="#"><img src="../../resources/image/common/foot_sns_insta.gif" alt="Instagram"/></a>
+				</span>
+			</div>
+			<div class="corpInfo">
+				<span class="infoInner">
+					<address><strong>본사</strong> 서울시 광진구 동일로 427</address>
+					<span><strong>대표이사</strong> 최승우</span>
+					<span><strong>사업자등록번호</strong>  206-86-29161</span>
+				</span>
+				<span class="infoInner">
+					<span><strong>개설문의</strong> 02-3438-6888 / 1688-7200</span>
+					<span><strong>소비자대표번호</strong> 1688-4666</span>
+					<span><strong>FAX.</strong> 02-3438-6802</span>
+				</span>
+			</div>
+			<p class="copyright">Copyright &copy; by Caffe Bene. All right reserved</p>
+		</div>
+	</footer>
+	<!-- footer -->
+</div>
+<!-- //wrap -->
+
+<div id="example" class="layerPopWrap">
+	<div class="layerConts">
+		<div class="imgSlideWrap">
+			<ul>
+				<li><span><img src="../../resources/image/temp/pop_sample01.jpg" alt="" /></span></li>
+				<li><span><img src="../../resources/image/temp/pop_sample02.jpg" alt="" /></span></li>
+				<li><span><img src="../../resources/image/temp/pop_sample03.jpg" alt="" /></span></li>
+			</ul>
+			<div class="indicate">
+				<button type="button" class="on"><span class="blind">1번째</span></button>
+				<button type="button"><span class="blind">2번째</span></button>
+				<button type="button"><span class="blind">3번째</span></button>
+			</div>
+		</div>
+	</div>
+	<button type="button" class="btnClose" onclick="layerPopFn.close('example');"><span class="blind">팝업 닫기</span></button>
+</div>
+</body>
+</html>

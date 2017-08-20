@@ -1,0 +1,217 @@
+@charset "utf-8";
+@import url("base.css");
+@import url("common.css");
+
+/* sect01 */
+.sect01 {overflow:hidden; position:relative; width:100%;}
+.sect01 ul {overflow:hidden; position:relative; width:100%;}
+.sect01 ul li {overflow:hidden; position:relative; float:left; width:100%;}
+.sect01 ul li a {position:relative; display:block; height:650px;}
+.sect01 ul li a .imgBox {position:absolute; top:0; left:50%; /*width:1920px;*/ height:650px; margin:0 0 0 -960px;}
+.sect01 ul li a .imgBox img {/*width:100%;*/ height:100%;}
+.sect01 ul li a .btnMore {position:absolute; left:50%; bottom:140px; width:46px; height:46px; margin:0 0 0 -23px;}
+.sect01 ul li a .btnMore img {width:100%;}
+.sect01 .indicateWrap {position:absolute; left:0; bottom:50px; width:100%; text-align:center;}
+.sect01 .indicateWrap button {width:12px; height:12px; margin:0 0 0 10px; outline:none; background:url('../image/main/navi_main_slide.png') no-repeat left top;}
+.sect01 .indicateWrap button:first-child {margin:0;}
+.sect01 .indicateWrap button.on {background:url('../image/main/navi_main_slide.png') no-repeat left -12px;}
+
+/* sect02 : Enjoy the CaffeBene */
+.sect02 {background:#f5f5f5;}
+.sect02 .sectInner {position:relative; width:880px; height:300px; margin:0 auto; padding:0 120px 0 200px; background:url('../image/main/bg_bar_div.gif') no-repeat center;}
+.sect02 .sectInner .discript {overflow:hidden; padding:65px 0 0;}
+.sect02 .sectInner .discript .titWrap {float:left; width:280px;}
+.sect02 .sectInner .discript .tit {color:#711b04;}
+.sect02 .sectInner .discript .tit span {display:block;}
+.sect02 .sectInner .discript .titCopy {margin:35px 0 0; color:#464646;}
+.sect02 .sectInner .discript .conTxt {float:right;width:380px; color:#464646;}
+.sect02 .sectInner .btnMore {position:absolute; bottom:65px; left:50%; margin:0 0 0 122px;}
+.sect02 .sectInner .btnMore img {width:44px; height:44px;}
+
+/* sect03 : Farm To Table */
+.sect03 {color:#fff; text-align:center; background:url('../image/main/visual01.jpg') no-repeat center top;}
+.sect03 .sectInner {position:relative; height:534px;}
+.sect03 .sectInner .discript {padding:130px 0 0;}
+.sect03 .sectInner .discript .tit {padding:0 0 20px; background:url('../image/main/tit_line_bot.png') no-repeat center bottom;}
+.sect03 .sectInner .discript .titCopy {margin:15px 0 0;}
+.sect03 .sectInner .discript .conTxt {margin:15px 0 0;}
+.sect03 .sectInner .btnMore {position:absolute; bottom:65px; left:50%; margin:0 0 0 -22px;}
+.sect03 .sectInner .btnMore img {width:44px; height:44px;}
+
+/* sect04 : Delicious Journey with CaffeBene */
+.sect04 {text-align:center;}
+.sect04 .sectInner {width:1200px; margin:0 auto; padding:80px 0 110px;}
+.sect04 .sectInner .discript .tit {color:#711b04;}
+.sect04 .sectInner .discript .tit span {display:inline-block;}
+.sect04 .sectInner .discript .titCopy {margin:20px 0 0; font-weight:normal; color:#1e1e1e;}
+.sect04 .sectInner .menuList {overflow:hidden; margin:40px 0 0;}
+.sect04 .sectInner .menuList li {float:left; height:256px;}
+.sect04 .sectInner .menuList li.m01 {width:477px; height:515px; margin:0 3px 0 0; background:#f7f7f7 url('../image/main/menu_link01.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m02 {width:238px; margin:0 3px 0 0; background:#f7f7f7 url('../image/main/menu_link02.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m03 {width:479px; background:#f7f7f7 url('../image/main/menu_link03.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m04 {width:479px; margin:3px 3px 0 0; background:#f7f7f7 url('../image/main/menu_link04.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m05 {width:238px; margin:3px 0 0; background:#f7f7f7 url('../image/main/menu_link05.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li a {display:block; height:61px; padding:195px 0 0;}
+.sect04 .sectInner .menuList li.m01 a {height:65px; padding:450px 0 0;}
+.sect04 .sectInner .menuList li a strong {display:block; font-size:17px; color:#7d645a;}
+.sect04 .sectInner .menuList li a p {margin:5px 0 0; font-size:13px; color:#464646;}
+
+/* sect05 : Experience the CaffeBene */
+.sect05 {color:#fff; text-align:center; background:url('../image/main/visual02.jpg') no-repeat center top;}
+.sect05 .sectInner {position:relative; height:550px;}
+.sect05 .sectInner .discript {padding:170px 0 0;}
+.sect05 .sectInner .discript .tit {padding:0 0 20px; background:url('../image/main/tit_line_bot.png') no-repeat center bottom;}
+.sect05 .sectInner .discript .titCopy {margin:15px 0 0;}
+.sect05 .sectInner .discript .conTxt {margin:15px 0 0;}
+.sect05 .sectInner .btnFindStore {position:absolute; bottom:143px; left:50%; margin:0 0 0 -140px;}
+.sect05 .sectInner .btnFindStore img {width:280px;}
+
+/* sect06 : Find a Partnership */
+.sect06 {background:#beb4af url('../image/main/bg_visual.jpg') no-repeat center 170px;}
+.sect06 .sectInner {position:relative; max-width:1200px; margin:0 auto;}
+.sect06 .sectInner .discript {overflow:hidden; width:720px; height:105px; margin:0 auto; padding:65px 0 0; color:#fff;}
+.sect06 .sectInner .discript .tit {float:left;}
+.sect06 .sectInner .discript .conTxt {float:right; width:380px; line-height:40px;}
+.sect06 .sectInner .btnMore {position:absolute; top:62px; right:210px;}
+.sect06 .sectInner .btnMore img {width:44px; height:44px;}
+.sect06 .sectInner .partnerHistory > ul {padding:100px 0;}
+.sect06 .sectInner .partnerHistory > ul > li {overflow:hidden;}
+.sect06 .sectInner .partnerHistory > ul > li:first-child {margin:-70px 0 0;}
+.sect06 .sectInner .partnerHistory > ul > li ul {overflow:hidden; float:left;}
+.sect06 .sectInner .partnerHistory > ul > li ul li {float:left; width:280px; padding:70px 0 0 20px; text-align:center;}
+.sect06 .sectInner .partnerHistory > ul > li ul li .national {text-align:center;}
+.sect06 .sectInner .partnerHistory > ul > li ul li .national em {display:inline-block; width:25px; height:25px; margin:0 5px 0 0; vertical-align:middle;}
+.sect06 .sectInner .partnerHistory > ul > li ul li .national em img {width:25px; height:25px; vertical-align:top;}
+.sect06 .sectInner .partnerHistory > ul > li ul li .national strong {display:inline-block; font-size:18px; line-height:20px; color:#7d645a; vertical-align:middle;}
+.sect06 .sectInner .partnerHistory > ul > li ul li span {display:block; margin:10px 0 0; font-size:14px; line-height:24px; color:#464646;}
+
+/* discript common style */
+.discript .tit {line-height:40px;font-size:30px;}
+.discript .titCopy {line-height:27px;font-size:17px; font-weight:bold;}
+.discript .conTxt {line-height:27px;font-size:14px;}
+
+/**********************************************
+*main - width:1200
+**********************************************/
+@media screen and (max-width:1200px) {
+
+/* sect02 : Enjoy the CaffeBene */
+.sect02 .sectInner {width:740px; padding:0;}
+.sect02 .sectInner .discript .tit span {display:inline-block;}
+.sect02 .sectInner .discript .conTxt {float:right;width:350px; padding: color:#464646;}
+.sect02 .sectInner .discript .conTxt br {display:none;}
+.sect02 .sectInner .btnMore {margin:0 0 0 15px;}
+
+/* sect03 : Farm To Table */
+.sect03 .sectInner .discript {width:740px; margin:0 auto;}
+
+/* sect04 : Delicious Journey with CaffeBene */
+.sect04 .sectInner {width:740px;}
+.sect04 .sectInner .discript .titCopy {margin:15px 0 0;}
+.sect04 .sectInner .menuList li {height:298px;}
+.sect04 .sectInner .menuList li.m01 {width:740px; height:298px; margin:0; background:#f7f7f7 url('../image/tablet/main/menu_link01.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m02 {width:368px; margin:4px 4px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link02.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m03 {width:368px; margin:4px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link03.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m04 {width:368px; margin:4px 4px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link04.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li.m05 {width:368px; margin:4px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link05.jpg') no-repeat center top;}
+.sect04 .sectInner .menuList li a { height:73px; padding:225px 0 0;}
+.sect04 .sectInner .menuList li.m01 a {height:73px; padding:225px 0 0;}
+
+/* sect05 : Experience the CaffeBene */
+.sect05 .sectInner {width:740; margin:0 auto;}
+
+/* sect06 : Find a Partnership */
+.sect06 {background:#beb4af url('../image/main/bg_visual.jpg') no-repeat center 200px;}
+.sect06 .sectInner {position:relative; max-width:1200px; margin:0 auto;}
+.sect06 .sectInner .discript {overflow:hidden; height:155px; padding:45px 0 0; text-align:center;}
+.sect06 .sectInner .discript .tit {float:none;}
+.sect06 .sectInner .discript .conTxt {float:none; width:auto; line-height:22px;}
+.sect06 .sectInner .btnMore {position:absolute; top:130px; right:50%; margin:0 -22px 0 0;}
+.sect06 .sectInner .partnerHistory > ul {width:740px; margin:0 auto;}
+.sect06 .sectInner .partnerHistory > ul > li:first-child {margin:-40px 0 0;}
+.sect06 .sectInner .partnerHistory > ul > li ul {float:none;}
+.sect06 .sectInner .partnerHistory > ul > li ul li {width:350px; padding:40px 0 0 20px; text-align:left;}
+
+}
+
+/**********************************************
+*main - width:720
+**********************************************/
+@media screen and (max-width:720px) {
+/* sect01 */
+.sect01 ul li a {height:400px;}
+.sect01 ul li a .imgBox {height:400px; margin:0 0 0 -591px;}
+.sect01 ul li a .btnMore {bottom:80px; width:34px; height:34px; margin:0 0 0 -17px;}
+.sect01 ul li a .btnMore img {width:100%;}
+.sect01 .indicateWrap {bottom:25px;}
+.sect01 .indicateWrap button {width:14px; height:14px; outline:none; background:url('../image/mobile/main/navi_main_slide.png') no-repeat left top; background-size:14px;}
+.sect01 .indicateWrap button.on {background:url('../image/mobile/main/navi_main_slide.png') no-repeat left -14px; background-size:14px;}
+
+/* sect02 : Enjoy the CaffeBene */
+.sect02 {background:#f5f5f5;}
+.sect02 .sectInner {width:320px; padding:0; background:none;}
+.sect02 .sectInner .discript {padding:40px 0 0; text-align:center;}
+.sect02 .sectInner .discript .titWrap {float:none; width:auto;}
+.sect02 .sectInner .discript .tit {padding:0 0 12px; font-size:22px; line-height:32px; color:#711b04; background:url('../image/main/tit_line_bot02.png') no-repeat center bottom; background-size:160px 1px}
+.sect02 .sectInner .discript .tit br {display:none;}
+.sect02 .sectInner .discript .titCopy {font-size:13px; margin:12px 0 0; line-height:18px; letter-spacing:-0.5px;}
+.sect02 .sectInner .discript .conTxt {float:none; width:auto; margin:15px 0 0; font-size:12px; line-height:18px;}
+.sect02 .sectInner .discript .conTxt br {display:block;}
+.sect02 .sectInner .btnMore {bottom:25px; left:50%; margin:0 0 0 -17px;}
+.sect02 .sectInner .btnMore img {width:34px; height:34px;}
+
+/* sect03 : Farm To Table */
+.sect03 {color:#fff; text-align:center; background:url('../image/main/visual01.jpg') no-repeat center top; background-size:auto 400px;}
+.sect03 .sectInner {position:relative; height:400px;}
+.sect03 .sectInner .discript {width:320px; padding:100px 0 0;}
+.sect03 .sectInner .discript .tit {padding:0 0 12px; font-size:23px; line-height:32px; background:url('../image/main/tit_line_bot.png') no-repeat center bottom; background-size:160px 1px}
+.sect03 .sectInner .discript .titCopy {margin:12px 0 0; font-size:13px; line-height:18px;}
+.sect03 .sectInner .discript .conTxt {margin:15px 0 0; font-size:12px; line-height:18px;}
+.sect03 .sectInner .btnMore {position:absolute; bottom:25px; left:50%; margin:0 0 0 -17px;}
+.sect03 .sectInner .btnMore img {width:34px; height:34px;}
+
+/* sect04 : Delicious Journey with CaffeBene */
+.sect04 .sectInner {width:300px;  padding:40px 0 55px;}
+.sect04 .sectInner .discript .tit {font-size:23px; line-height:32px;}
+.sect04 .sectInner .discript .tit span {display:block;}
+.sect04 .sectInner .discript .titCopy {margin:8px 0 0; font-size:13px;}
+.sect04 .sectInner .menuList {margin:30px 0 0;}
+.sect04 .sectInner .menuList li {height:178px;}
+.sect04 .sectInner .menuList li.m01 {width:300px; height:159px; margin:0; background:#f7f7f7 url('../image/tablet/main/menu_link01.jpg') no-repeat center top; background-size:370px 149px;}
+.sect04 .sectInner .menuList li.m02 {width:149px; margin:2px 2px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link02.jpg') no-repeat center top; background-size:184px 149px;}
+.sect04 .sectInner .menuList li.m03 {width:149px; margin:2px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link03.jpg') no-repeat center top; background-size:184px 149px;}
+.sect04 .sectInner .menuList li.m04 {width:149px; margin:2px 2px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link04.jpg') no-repeat center top; background-size:184px 149px;}
+.sect04 .sectInner .menuList li.m05 {width:149px; margin:2px 0 0; background:#f7f7f7 url('../image/tablet/main/menu_link05.jpg') no-repeat center top; background-size:184px 149px;}
+.sect04 .sectInner .menuList li a { height:68px; padding:110px 15px 0;}
+.sect04 .sectInner .menuList li.m01 a {height:54px; padding:105px 15px 0;}
+.sect04 .sectInner .menuList li a strong {font-size:13px; line-height:18px;}
+.sect04 .sectInner .menuList li a p {margin:5px 0 0; font-size:11px; line-height:16px;}
+
+/* sect05 : Experience the CaffeBene */
+.sect05 {color:#fff; text-align:center; background:url('../image/main/visual02.jpg') no-repeat center top; background-size:auto 400px;}
+.sect05 .sectInner {position:relative; height:400px;}
+.sect05 .sectInner .discript {padding:110px 0 0;}
+.sect05 .sectInner .discript .tit {padding:0 0 12px; line-height:32px; font-size:23px; background:url('../image/main/tit_line_bot.png') no-repeat center bottom; background-size:160px 1px;}
+.sect05 .sectInner .discript .titCopy {margin:15px 0 0; font-size:13px; line-height:18px;}
+.sect05 .sectInner .discript .conTxt {margin:10px 0 0; font-size:12px; line-height:18px;}
+.sect05 .sectInner .btnFindStore {position:absolute; bottom:110px; left:50%; margin:0 0 0 -100px;}
+.sect05 .sectInner .btnFindStore img {width:200px;}
+
+/* sect06 : Find a Partnership */
+.sect06 {background:#beb4af url('../image/main/bg_visual.jpg') no-repeat center 150px; background-size:auto 100%; /*background-size:960px auto;*/}
+.sect06 .sectInner {position:relative; width:320px; margin:0 auto;}
+.sect06 .sectInner .discript {width:320px; height:130px; padding:20px 0 0;}
+.sect06 .sectInner .discript .tit { font-size:23px;}
+.sect06 .sectInner .discript .conTxt {font-size:12px; line-height:22px;}
+.sect06 .sectInner .btnMore {top:100px; margin:0 -17px 0 0;}
+.sect06 .sectInner .btnMore img {width:34px; height:34px;}
+.sect06 .sectInner .partnerHistory > ul {width:320px; margin:0 auto;}
+.sect06 .sectInner .partnerHistory > ul > li:first-child {margin:-20px 0 0;}
+.sect06 .sectInner .partnerHistory > ul > li ul li {width:300px; padding:20px 10px 0; text-align:center;}
+.sect06 .sectInner .partnerHistory > ul > li ul li .national em {width:20px; height:20px;}
+.sect06 .sectInner .partnerHistory > ul > li ul li .national em img {width:20px; height:20px;}
+.sect06 .sectInner .partnerHistory > ul > li ul li .national strong {font-size:13px; line-height:18px;}
+.sect06 .sectInner .partnerHistory > ul > li ul li span {display:block; margin:10px 0 0; font-size:12px; line-height:18px;}
+
+
+}
