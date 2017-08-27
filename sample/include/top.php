@@ -6,7 +6,7 @@
 <?
 if(!$_SESSION) {
 ?>
-			<a href="/phpStudy/sample/login.php" class="linkLog">LOGIN</a>
+			<a href="/phpStudy/sample/member/login.php" class="linkLog">LOGIN</a>
 <?
 }else{
 ?>
