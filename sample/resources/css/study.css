@@ -1,0 +1,2 @@
+.layer {display:none; position:absolute; top:50px; left:50%; padding:20px; border:2px solid #000; background:#fff; z-index:10;}
+.layer.sizeS {width:200px; margin:0 0 0 -100px;}

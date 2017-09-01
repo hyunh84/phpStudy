@@ -4,6 +4,7 @@
 
 <title>Caffe bene</title>
 <link rel="stylesheet" type="text/css" href="/phpStudy/sample/resources/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/phpStudy/sample/resources/css/study.css" />
 <script type="text/javascript" src="/phpStudy/sample/resources/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="/phpStudy/sample/resources/js/html5.js"></script>
 <script type="text/javascript" src="/phpStudy/sample/resources/js/swiper.jquery.js"></script>
