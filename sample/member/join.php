@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,13 +8,14 @@ session_start();
 
 
 <script type="text/javascript">
+var userIdCheck;
 
 var joinValid = function() {
 	var $userName = $('input[name="userName"]');
 	var $userId = $('input[name="userId"]');
 	var $userPw = $('input[name="userPw"]');
 	var $pwConfirm = $('input[name="pwConfirm"]');
-	var $ph01 = $('input[name="ph01"]');
+	var $ph01 = $('select[name="ph01"]');
 	var $ph02 = $('input[name="ph02"]');
 	var $ph03 = $('input[name="ph03"]');
 	var $emailURL = $('input[name="emailURL"]');
@@ -25,15 +26,17 @@ var joinValid = function() {
 		$userName.focus();
 		alert('이름을 입력해주세요!');
 		return;
+	}else if(!userIdCheck) {
+		alert('아이디 중복체크를 해주세요!');
 	}else if($userId.val() == '') {
 		$userId.focus();
 		alert('아이디를 입력해주세요');
 		return;
 	}else if($userPw.val() == '') {
-		$pwConfirm.focus();
+		$userPw.focus();
 		alert('패스워드를 입력해주세요');
 		return;
-	}else if($pwConfirm.val() == $userPw.vall()) {
+	}else if($pwConfirm.val() != $userPw.val()) {
 		alert('패스워드가 일치하지 않습니다.');
 		return;
 	}else if($ph01.val() == '' || $ph02.val() == '' || $ph03.val() == '') {
@@ -49,16 +52,62 @@ var joinValid = function() {
 		return;
 	}
 
-	$('form[name="joinTable"]').submit();
+	//$('form[name="joinTable"]').submit();
+
+}
+
+var idDuplicate = function() {
+
+	$.ajax({ // ajax실행부분
+	   type: "post",
+	   url : "/phpStudy/sample/member/id_check.php",
+	   data : {
+		   userID : $('input[name="userId"]').val()
+	   },
+	   success : function(result){
+		   var $result = result;
+		   console.log($result);
+		   $('#usrIdChk').html(result).show();
+		//   console.log($('input[name="idCheck"]').val());
+			console.log($('input[name="idCheck"]').val());
+
+		   userIdCheck = $('input[name="idCheck"]').val();
+   	   },
+	   error : function(){ alert('시스템 문제발생');}
+   });
 
 }
 
 
 $(document).ready(function(){
 
+	$('select[name="domainSlct"]').change(function() {
+		var $this = $(this);
+		var $chVal = $('option:selected', $this).val();
+
+		$('input[name="eDomain"]').val($chVal);
+	});
+
+	$('input[name="eDomain"]').focusin(function() {
+		$('select[name="domainSlct"] option').removeAttr('selected').eq(0).attr('selected', 'selected');
+		$('select[name="domainSlct"]').parent().find('> span').text($('select[name="domainSlct"] option:selected').val());
+	});
+
 	$('#joinReg').click(function(e) {e.preventDefault();
-		//console.log('submit');
 		joinValid();
+	});
+
+	$('#idDupl').click(function(e) {e.preventDefault();
+		var $userId = $('input[name="userId"]');
+		if($userId == '') {
+			$userId.focus();
+			return;
+		}
+		idDuplicate();
+	});
+
+	$(document).on('click', '.btnClosePop', function() {
+		$('.layer').hide().find('*').remove();
 	});
 
 });
@@ -109,21 +158,21 @@ $(document).ready(function(){
 							<strong class="cell_th">아이디</strong>
 							<div class="cell_td">
 								<input type="text" class="txtInput" title="아이디을 입력하세요." name="userId" style="width:60%;">
-								<a href="#" class="btn01">중복확인</a>
+								<a href="#" id="idDupl" class="btn01">중복확인</a>
 								<div class="txtDiv">6~12자의 영문+숫자만 가능합니다.</div>
 							</div>
 						</li>
 						<li>
 							<strong class="cell_th">비밀번호</strong>
 							<div class="cell_td">
-								<input type="text" class="txtInput" title="비밀번호을 입력하세요." name="userPw" style="width:60%;">
+								<input type="password" class="txtInput" title="비밀번호을 입력하세요." name="userPw" style="width:60%;">
 								<div class="txtDiv">비밀번호는 6자리 이상이며, 숫자영문 혼용은 필수입니다.</div>
 							</div>
 						</li>
 						<li>
 							<strong class="cell_th">비밀번호 확인</strong>
 							<div class="cell_td">
-								<input type="text" class="txtInput" title="비밀번호 확인을 위해 재입력하세요." name="pwConfirm" style="width:60%;">
+								<input type="password" class="txtInput" title="비밀번호 확인을 위해 재입력하세요." name="pwConfirm" style="width:60%;">
 								<div class="txtDiv">입력하신 비밀번호를 확인합니다.</div>
 							</div>
 						</li>
@@ -168,7 +217,7 @@ $(document).ready(function(){
 									<span class="domainSelect">
 										<span class="select_custom">
 											<span>직접선택</span>
-											<select class="select" name="domainSlct" title="이메일 도메인을 선택하세요.">
+											<select class="select" id="domainSlct" name="domainSlct" title="이메일 도메인을 선택하세요.">
 												<option>직접선택</option>
 												<option>naver.com</option>
 												<option>hanmail.net</option>
@@ -216,5 +265,9 @@ $(document).ready(function(){
 	<!-- footer -->
 </div>
 <!-- //wrap -->
+
+<article id="usrIdChk" class="layer"></article>
+
+
 </body>
 </html>
